@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import LandingPage from './pages/LandingPage';
 
 const App = () => {
 	return (
 		<div className="App font-body">
-			<header className="App-header">
+			<LandingPage />
+			{/* <header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 				<p>
 					Edit <code>src/App.js</code> and save to reload.
@@ -17,10 +18,7 @@ const App = () => {
 				>
 					Learn React
 				</a>
-				<div className="text-blue-600">
-					Almost before we knew it, we had left the ground.
-				</div>
-			</header>
+			</header> */}
 		</div>
 	);
 };
