@@ -3,7 +3,7 @@ import './App.css';
 
 const App = () => {
 	return (
-		<div className="App">
+		<div className="App font-body">
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 				<p>
@@ -17,7 +17,9 @@ const App = () => {
 				>
 					Learn React
 				</a>
-				<div className="text-blue-600 font-bold">Test</div>
+				<div className="text-blue-600">
+					Almost before we knew it, we had left the ground.
+				</div>
 			</header>
 		</div>
 	);
