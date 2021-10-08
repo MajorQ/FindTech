@@ -7,7 +7,7 @@ const navBarItems = [
 
 const NavBar = () => {
 	return (
-		<nav className="flex justify-around items-center bg-transparent py-6">
+		<nav className="flex justify-between items-center bg-transparent py-6 col-span-2">
 			{/* logo */}
 			<div>Logo</div>
 

@@ -3,7 +3,7 @@ import LandingPage from './pages/LandingPage';
 
 const App = () => {
 	return (
-		<div className="App font-body">
+		<div className="App">
 			<LandingPage />
 			{/* <header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
