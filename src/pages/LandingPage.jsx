@@ -1,16 +1,18 @@
 import HeaderBody from '../components/main-header/HeaderBody';
 import HeaderButton from '../components/main-header/HeaderButton';
 import NavBar from '../components/main-header/NavBar';
+import headerImage from '../assets/images/header_image.png';
 
 const LandingPage = () => {
 	return (
-		<div className="h-screen">
-			<header className="grid grid-cols-2 bg-gray-700 h-full px-32">
-				<NavBar />
-				<HeaderBody />
-				<HeaderButton />
-			</header>
-		</div>
+		<header
+			className="grid grid-cols-2 gap-y-16 px-40"
+			style={{ backgroundImage: `url(${headerImage})` }}
+		>
+			<NavBar />
+			<HeaderBody />
+			<HeaderButton />
+		</header>
 	);
 };
 
