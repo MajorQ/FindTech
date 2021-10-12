@@ -7,17 +7,21 @@ import headerImage from '../assets/images/header_image.png';
 
 const LandingPage = () => {
 	return (
-		<header
-			className="grid grid-cols-2 gap-y-16 px-40"
-			style={{ backgroundImage: `url(${headerImage})` }}
-		>
-      <NavBar />
-			<HeaderBody />
-			<HeaderButton />
-      <MainInfo />
-			<SecondInfo />
+		<div>
+			<header
+				className="grid grid-cols-2 gap-y-16 px-40"
+				style={{ backgroundImage: `url(${headerImage})` }}
+			>
+				<NavBar />
+				<HeaderBody />
+				<HeaderButton />
+			</header>
 
-		</header>
+			<main>
+				<MainInfo />
+				<SecondInfo />
+			</main>
+		</div>
 	);
 };
 
