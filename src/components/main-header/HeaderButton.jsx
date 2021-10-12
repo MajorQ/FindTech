@@ -1,9 +1,9 @@
 const HeaderButton = () => {
 	return (
-		<button className="col-span-2 container bg-accent text-left px-4 py-2">
+		<button className="col-span-2 container bg-accent text-left px-4 py-6">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				className="h-8 w-8 inline-block"
+				className="ml-4 h-12 w-12 inline-block"
 				fill="none"
 				viewBox="0 0 24 24"
 				stroke="currentColor"
@@ -16,7 +16,7 @@ const HeaderButton = () => {
 				/>
 			</svg>
 
-			<span className="text-xl font-bold px-4">Find Laptops</span>
+			<span className="text-2xl font-bold px-4">Find Laptops</span>
 
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

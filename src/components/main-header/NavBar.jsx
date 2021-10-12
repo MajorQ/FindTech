@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 
 const navBarItems = [
@@ -14,9 +15,11 @@ const NavBar = () => {
 			<img src={logo} alt="Findtech Company Logo" />
 
 			{/* Buttons */}
-			<div className="flex w-2/3 justify-between">
+			<div className="flex w-2/3 justify-between items-center">
 				{navBarItems.map((item) => (
-					<button className="text-white text-xs font-bold">{item.title}</button>
+					<Link to="/" className="text-white text-xs font-bold">
+						{item.title}
+					</Link>
 				))}
 
 				<button className="bg-accent rounded-tr-2xl px-8 py-2">
