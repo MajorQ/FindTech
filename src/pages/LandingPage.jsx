@@ -1,6 +1,8 @@
 import HeaderBody from '../components/main-header/HeaderBody';
 import HeaderButton from '../components/main-header/HeaderButton';
 import NavBar from '../components/main-header/NavBar';
+import MainInfo from '../components/learn-more/MainInfo';
+import SecondInfo from '../components/learn-more/SecondInfo';
 import headerImage from '../assets/images/header_image.png';
 
 const LandingPage = () => {
@@ -9,9 +11,12 @@ const LandingPage = () => {
 			className="grid grid-cols-2 gap-y-16 px-40"
 			style={{ backgroundImage: `url(${headerImage})` }}
 		>
-			<NavBar />
+      <NavBar />
 			<HeaderBody />
 			<HeaderButton />
+      <MainInfo />
+			<SecondInfo />
+
 		</header>
 	);
 };
