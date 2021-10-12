@@ -36,7 +36,7 @@ const SecondInfo = () => {
 					</div>
 				</div>
 			</div>
-			<div className="">
+			<div className="grid justify-end">
 				<img src={image_secondinfo} alt="" width="754" height="650" />
 			</div>
 		</div>
