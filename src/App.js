@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import LandingPage from './pages/LandingPage';
 
 const App = () => {
 	return (
-		<div className="App font-body">
+		<div className="App">
 			<LandingPage />
 			{/* <header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
@@ -19,9 +18,6 @@ const App = () => {
 				>
 					Learn React
 				</a>
-				<div className="text-blue-600">
-					Almost before we knew it, we had left the ground.
-				</div>
 			</header> */}
 		</div>
 	);
