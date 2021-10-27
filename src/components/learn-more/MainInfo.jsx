@@ -1,4 +1,4 @@
-import image_maininfo from '../../assets/image/image_maininfo.png';
+import image_maininfo from '../../assets/images/image_maininfo.png';
 
 const MainInfo = () => {
 	return (

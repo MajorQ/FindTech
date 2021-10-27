@@ -1,4 +1,4 @@
-import image_secondinfo from '../../assets/image/image_secondinfo.png';
+import image_secondinfo from '../../assets/images/image_secondinfo.png';
 
 const SecondInfo = () => {
 	return (
