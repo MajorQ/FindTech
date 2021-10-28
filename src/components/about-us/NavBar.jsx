@@ -8,7 +8,7 @@ const navBarItems = [
 	{ title: 'About Us', link: '/about-us' },
 ];
 
-const NavBar = () => {
+const AboutNavBar = () => {
 	return (
 		<nav className="col-span-2 flex justify-between items-center bg-transparent py-6">
 			{/* logo */}
@@ -36,4 +36,4 @@ const NavBar = () => {
 	);
 };
 
-export default NavBar;
+export default AboutNavBar;
