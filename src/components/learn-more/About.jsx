@@ -1,3 +1,5 @@
+import RoundedButton from '../core/RoundedButton';
+
 const About = () => {
 	return (
 		<div className="w-screen flex flex-col p-32 items-center bg-gradient-to-r from-accent_dark to-black">
@@ -11,22 +13,12 @@ const About = () => {
 				development. Therefore, we present to you our latest and greatest idea:
 				Findtech, to show how the power of data can make your life easier.
 			</p>
-			<button className="flex justify-evenly bg-accent rounded-tr-xl w-2/12 px-4 py-6">
-				<span className="text-sm text-black font-bold">Learn More</span>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					className="h-6 w-6 inline-block stroke-current text-white"
-					fill="none"
-					viewBox="0 0 24 24"
-				>
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M17 8l4 4m0 0l-4 4m4-4H3"
-					/>
-				</svg>
-			</button>
+			<RoundedButton
+				label="Get to know us"
+				arrowColor="text-white"
+				backgroundColor="bg-accent"
+				textColor="text-black"
+			/>
 		</div>
 	);
 };
