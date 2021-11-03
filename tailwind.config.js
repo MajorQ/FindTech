@@ -5,6 +5,7 @@ module.exports = {
 		extend: {
 			colors: {
 				accent: '#FFAC12',
+				accent_dark: '#271A00',
 			},
 			fontFamily: {
 				body: ['Open Sans'],
