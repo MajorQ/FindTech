@@ -4,6 +4,7 @@ import NavBar from '../components/main-header/NavBar';
 import MainInfo from '../components/learn-more/MainInfo';
 import SecondInfo from '../components/learn-more/SecondInfo';
 import headerImage from '../assets/images/header_image.png';
+import About from '../components/learn-more/About';
 
 const LandingPage = () => {
 	return (
@@ -20,6 +21,7 @@ const LandingPage = () => {
 			<main>
 				<MainInfo />
 				<SecondInfo />
+				<About />
 			</main>
 		</div>
 	);
