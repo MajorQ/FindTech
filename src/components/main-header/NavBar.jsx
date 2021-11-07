@@ -5,7 +5,7 @@ const navBarItems = [
 	{ title: 'Browse', link: '' },
 	{ title: 'How it Works', link: '' },
 	{ title: 'Documentation', link: '' },
-	{ title: 'About Us', link: '' },
+	{ title: 'About Us', link: '/about-us' },
 ];
 
 const NavBar = () => {
@@ -17,7 +17,7 @@ const NavBar = () => {
 			{/* Buttons */}
 			<div className="flex w-2/3 justify-between items-center">
 				{navBarItems.map((item) => (
-					<Link to="/" className="text-white text-xs font-bold">
+					<Link to={item.link} className="text-white text-xs font-bold">
 						{item.title}
 					</Link>
 				))}
