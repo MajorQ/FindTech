@@ -22,7 +22,7 @@ const AboutHeaderBody = () => {
 			</div>
 			<div className="w-1/2 bg-white justify-self-center rounded-3xl shadow-lg">
 				<div className="flex flex-col justify-center items-center ">
-					<h1 className=" my-5 font-bold">
+					<h1 className=" my-5 font-bold text-3xl">
 						<span className="text-black">Contact</span>
 						<span className="text-accent "> Us</span>
 					</h1>
@@ -60,7 +60,7 @@ const AboutHeaderBody = () => {
 						</div>
 					</form>
 
-					<button className="bg-black w-1/2 font-bold rounded-tr-xl px-4 py-2 mt-5 text-center">
+					<button className="bg-black w-1/2 font-bold rounded-tr-xl px-4 py-2 my-5 text-center">
 						<span className="px-1 text-sm text-white">Send to us </span>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

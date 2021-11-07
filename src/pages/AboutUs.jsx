@@ -1,4 +1,5 @@
 import background from '../assets/images/bg-aboutus.png';
+import AboutProfile from '../components/about-us/AboutProfile';
 import AboutHeaderBody from '../components/about-us/HeaderBody';
 import AboutNavBar from '../components/about-us/NavBar';
 
@@ -16,6 +17,9 @@ const AboutUs = () => {
 			>
 				<AboutHeaderBody />
 			</div>
+			<main>
+				<AboutProfile />
+			</main>
 		</div>
 	);
 };
