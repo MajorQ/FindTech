@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 
 import './App.css';
 import AboutUs from './pages/AboutUs';
+import BrowsePage from './pages/BrowsePage';
 
 const App = () => {
 	return (
@@ -12,6 +13,7 @@ const App = () => {
 				<Switch>
 					<Route exact path="/" component={LandingPage} />
 					<Route path="/about-us" component={AboutUs} />
+					<Route path="/browse" component={BrowsePage} />
 				</Switch>
 			</BrowserRouter>
 		</div>

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 
 const navBarItems = [
-	{ title: 'Browse', link: '' },
+	{ title: 'Browse', link: '/browse' },
 	{ title: 'How it Works', link: '' },
 	{ title: 'Documentation', link: '' },
 	{ title: 'About Us', link: '/about-us' },
