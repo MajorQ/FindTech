@@ -8,7 +8,7 @@ const navBarItems = [
 	{ title: 'About Us', link: '/about-us' },
 ];
 
-const AboutNavBar = () => {
+const NavBar = ({ selected }) => {
 	return (
 		<nav className="col-span-2 flex justify-between items-center bg-transparent py-6">
 			{/* logo */}
@@ -17,7 +17,7 @@ const AboutNavBar = () => {
 			{/* Buttons */}
 			<div className="flex w-2/3 justify-between items-center">
 				{navBarItems.map((item) => {
-					if (item.title === 'About Us') {
+					if (item.title === selected) {
 						return (
 							<Link to={item.link} className="text-accent text-xs font-bold">
 								{item.title}
@@ -36,4 +36,4 @@ const AboutNavBar = () => {
 	);
 };
 
-export default AboutNavBar;
+export default NavBar;
