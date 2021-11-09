@@ -15,9 +15,9 @@ const About = () => {
 			</p>
 			<RoundedButton
 				label="Get to know us"
-				arrowColor="text-white"
-				backgroundColor="bg-accent"
-				textColor="text-black"
+				arrowColor="white"
+				backgroundColor="accent"
+				textColor="black"
 			/>
 		</div>
 	);

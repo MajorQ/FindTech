@@ -19,9 +19,9 @@ const SecondInfo = () => {
 					</p>
 					<RoundedButton
 						label="Learn More"
-						arrowColor="text-accent"
-						backgroundColor="bg-black"
-						textColor="text-white"
+						arrowColor="accent"
+						backgroundColor="black"
+						textColor="white"
 					/>
 				</div>
 			</div>

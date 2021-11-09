@@ -1,12 +1,14 @@
 const RoundedButton = ({ label, textColor, backgroundColor, arrowColor }) => {
 	return (
 		<button
-			className={`flex justify-evenly ${backgroundColor} rounded-tr-xl w-48 px-4 py-6`}
+			className={`flex justify-evenly bg-${backgroundColor} rounded-tr-xl w-48 px-4 py-6`}
 		>
-			<span className={`${textColor} font-bold text-sm pr-2`}>{label}</span>
+			<span className={`text-${textColor} font-bold text-sm pr-2`}>
+				{label}
+			</span>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				className={`stroke-current ${arrowColor} h-6 w-6 inline-block`}
+				className={`stroke-current text-${arrowColor} h-6 w-6 inline-block`}
 				fill="none"
 				viewBox="0 0 24 24"
 			>

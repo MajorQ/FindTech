@@ -11,9 +11,9 @@ const Footer = () => {
 				</h2>
 				<RoundedButton
 					label="Find yours now"
-					arrowColor="text-white"
-					backgroundColor="bg-accent"
-					textColor="text-black"
+					arrowColor="white"
+					backgroundColor="accent"
+					textColor="black"
 				/>
 			</div>
 

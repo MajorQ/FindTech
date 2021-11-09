@@ -15,7 +15,12 @@ const App = () => {
 					<Route exact path="/" component={LandingPage} />
 					<Route path="/about-us" component={AboutUsPage} />
 					<Route path="/browse" component={BrowsePage} />
-					<Route path="/questions" component={QuestionsPage} />
+
+					{/* TODO: Dynamic path*/}
+					<Route path="/question" component={QuestionsPage} />
+
+					{/* TODO: 404 not found */}
+					<Route path="/" component={LandingPage} />
 				</Switch>
 			</BrowserRouter>
 		</div>
