@@ -1,4 +1,4 @@
-const QuestionAnswers = ({ answers, onSelect }) => {
+const QuestionAnswers = ({ answers, selectedAnswer, onSelect }) => {
 	return (
 		<div className="w-2/3 h-1/2 bg-white rounded-2xl py-4 px-8">
 			<div className="bg-gray-100 rounded-xl p-4">
@@ -7,20 +7,33 @@ const QuestionAnswers = ({ answers, onSelect }) => {
 					<span className="text-accent font-bold"> options</span>
 				</h2>
 			</div>
-			{answers.map((answer, index) => AnswerPill(answer))}
+
+			{answers.map((answer, index) => (
+				<AnswerPill
+					text={answer.text}
+					isSelected={index === selectedAnswer}
+					onClick={() => onSelect(index)}
+				/>
+			))}
 		</div>
 	);
 };
 
-const AnswerPill = (answer, isSelected = false) => {
+const AnswerPill = ({ text, isSelected = false, onClick }) => {
 	return isSelected ? (
-		<div className="rounded-xl border-2 border-accent p-6 my-4">
-			<p>{answer.text}</p>
-		</div>
+		<button
+			className="rounded-xl border-2 border-accent block w-full text-left p-6 my-4"
+			onClick={onClick}
+		>
+			{text}
+		</button>
 	) : (
-		<div className="rounded-xl border-2 border-gray-300 p-6 my-4">
-			<p>{answer.text}</p>
-		</div>
+		<button
+			className="rounded-xl border-2 border-gray-300 block w-full text-left p-6 my-4"
+			onClick={onClick}
+		>
+			{text}
+		</button>
 	);
 };
 

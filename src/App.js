@@ -5,7 +5,7 @@ import LandingPage from './pages/LandingPage';
 import './App.css';
 import AboutUsPage from './pages/AboutUsPage';
 import BrowsePage from './pages/BrowsePage';
-import QuestionsPage from './pages/QuestionsPage';
+import QuestionsPage from './pages/QuestionPage';
 
 const App = () => {
 	return (
