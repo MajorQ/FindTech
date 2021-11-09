@@ -1,5 +1,5 @@
-import image_secondinfo from '../../assets/images/image_secondinfo.png';
-import RoundedButton from '../core/RoundedButton.jsx';
+import image_secondinfo from '../../../assets/images/image_secondinfo.png';
+import RoundedButton from '../../core/RoundedButton.jsx';
 
 const SecondInfo = () => {
 	return (

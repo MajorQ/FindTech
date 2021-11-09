@@ -1,5 +1,5 @@
-import logo from '../../assets/images/logo.svg';
-import RoundedButton from '../core/RoundedButton';
+import logo from '../../../assets/images/logo.svg';
+import RoundedButton from '../../core/RoundedButton';
 
 const Footer = () => {
 	return (

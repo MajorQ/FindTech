@@ -1,4 +1,4 @@
-import RoundedButton from '../core/RoundedButton';
+import RoundedButton from '../../core/RoundedButton';
 
 const About = () => {
 	return (

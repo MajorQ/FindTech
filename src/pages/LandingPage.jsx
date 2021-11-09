@@ -6,7 +6,7 @@ import SecondInfo from '../components/landing-page/body/SecondInfo';
 import headerImage from '../assets/images/header_image.png';
 import About from '../components/landing-page/body/About';
 import UserReviews from '../components/landing-page/body/UserReviews';
-import Footer from '../components/footer/Footer';
+import Footer from '../components/landing-page/footer/Footer';
 
 const LandingPage = () => {
 	return (
