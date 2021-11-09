@@ -3,8 +3,8 @@ import logo from '../../../assets/images/logo.svg';
 
 const navBarItems = [
 	{ title: 'Browse', link: '/browse' },
-	{ title: 'How it Works', link: '' },
-	{ title: 'Documentation', link: '' },
+	// { title: 'How it Works', link: '' },
+	// { title: 'Documentation', link: '' },
 	{ title: 'About Us', link: '/about-us' },
 ];
 
@@ -12,10 +12,12 @@ const NavBar = () => {
 	return (
 		<nav className="col-span-2 flex justify-between items-center bg-transparent py-6">
 			{/* logo */}
-			<img src={logo} alt="Findtech Company Logo" />
+			<Link to="/">
+				<img src={logo} alt="Findtech Company Logo" />
+			</Link>
 
 			{/* Buttons */}
-			<div className="flex w-2/3 justify-between items-center">
+			<div className="flex w-2/3 justify-evenly items-center">
 				{navBarItems.map((item) => (
 					<Link to={item.link} className="text-white text-xs font-bold">
 						{item.title}

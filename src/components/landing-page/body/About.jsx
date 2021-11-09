@@ -14,6 +14,7 @@ const About = () => {
 				Findtech, to show how the power of data can make your life easier.
 			</p>
 			<RoundedButton
+				link="/About-us"
 				label="Get to know us"
 				arrowColor="white"
 				backgroundColor="accent"

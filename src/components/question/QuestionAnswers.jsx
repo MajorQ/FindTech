@@ -8,28 +8,26 @@ const QuestionAnswers = ({ answers, selectedAnswer, onSelect }) => {
 				</h2>
 			</div>
 
-			{answers.map((answer, index) => (
-				<AnswerPill
-					text={answer.text}
-					isSelected={index === selectedAnswer}
-					onClick={() => onSelect(index)}
-				/>
-			))}
+			{answers.map((answer, index) => {
+				const isSelected = index === selectedAnswer;
+				const borderColor = isSelected ? 'accent' : 'gray-300';
+				const onClick = isSelected ? () => onSelect(-1) : () => onSelect(index);
+				return (
+					<AnswerPill
+						text={answer.text}
+						borderColor={borderColor}
+						onClick={onClick}
+					/>
+				);
+			})}
 		</div>
 	);
 };
 
-const AnswerPill = ({ text, isSelected = false, onClick }) => {
-	return isSelected ? (
+const AnswerPill = ({ text, borderColor, onClick }) => {
+	return (
 		<button
-			className="rounded-xl border-2 border-accent block w-full text-left p-6 my-4"
-			onClick={onClick}
-		>
-			{text}
-		</button>
-	) : (
-		<button
-			className="rounded-xl border-2 border-gray-300 block w-full text-left p-6 my-4"
+			className={`transition duration-200 ease-in rounded-xl border-2 border-${borderColor} block w-full text-left p-6 my-4`}
 			onClick={onClick}
 		>
 			{text}
