@@ -1,11 +1,11 @@
-import HeaderBody from '../components/main-header/HeaderBody';
-import HeaderButton from '../components/main-header/HeaderButton';
-import NavBar from '../components/main-header/NavBar';
-import MainInfo from '../components/learn-more/MainInfo';
-import SecondInfo from '../components/learn-more/SecondInfo';
+import HeaderBody from '../components/landing-page/header/HeaderBody';
+import HeaderButton from '../components/landing-page/header/HeaderButton';
+import NavBar from '../components/landing-page/header/NavBar';
+import MainInfo from '../components/landing-page/body/MainInfo';
+import SecondInfo from '../components/landing-page/body/SecondInfo';
 import headerImage from '../assets/images/header_image.png';
-import About from '../components/learn-more/About';
-import UserReviews from '../components/learn-more/UserReviews';
+import About from '../components/landing-page/body/About';
+import UserReviews from '../components/landing-page/body/UserReviews';
 import Footer from '../components/footer/Footer';
 
 const LandingPage = () => {

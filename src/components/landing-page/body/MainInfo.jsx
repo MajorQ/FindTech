@@ -1,5 +1,5 @@
 import image_maininfo from '../../assets/images/image_maininfo.png';
-import RoundedButton from '../core/RoundedButton.jsx';
+import RoundedButton from '../../core/RoundedButton.jsx';
 
 const MainInfo = () => {
 	return (
