@@ -1,12 +1,14 @@
-const QuestionBody = () => {
+import QuestionAnswers from './QuestionAnswers';
+import QuestionPrompt from './QuestionPrompt';
+
+const QuestionBody = ({ questionNumber, questionText, answers = [] }) => {
 	return (
-		<main>
-			<div className="bg-gray-100 px-52 py-10">
-				<div>
-					<strong>Question #</strong>
-					<p>How much is your budget?</p>
-				</div>
-			</div>
+		<main className="flex flex-col justify-evenly items-center bg-gray-100 px-52 py-8">
+			<QuestionPrompt
+				questionNumber={questionNumber}
+				questionText={questionText}
+			/>
+			<QuestionAnswers answers={answers} />
 		</main>
 	);
 };

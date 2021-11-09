@@ -2,7 +2,7 @@ import RoundedButton from '../../core/RoundedButton';
 
 const About = () => {
 	return (
-		<div className="w-screen flex flex-col items-center bg-gradient-to-r from-accent_dark to-black  p-32">
+		<div className="w-full flex flex-col items-center bg-gradient-to-r from-accent_dark to-black  p-32">
 			<div className="w-44 h-1 bg-gradient-to-r from-yellow-400 to-black"></div>
 			<h2 className="text-4xl text-left text-white font-bold tracking-tighter my-5">
 				About Findtech Team

@@ -1,6 +1,6 @@
 const UserReviews = () => {
 	return (
-		<div className="w-screen flex flex-col items-center p-32">
+		<div className="w-full flex flex-col items-center p-32">
 			<h2 className="text-4xl text-left text-black font-bold tracking-tighter my-5">
 				User Reviews
 			</h2>

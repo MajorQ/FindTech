@@ -12,7 +12,7 @@ const LandingPage = () => {
 	return (
 		<div>
 			<header
-				className="h-screen grid grid-cols-2 content-between px-40"
+				className="w-full h-screen grid grid-cols-2 content-between px-40"
 				style={{ backgroundImage: `url(${headerImage})` }}
 			>
 				<NavBar />
@@ -27,9 +27,7 @@ const LandingPage = () => {
 				<UserReviews />
 			</main>
 
-			<footer>
-				<Footer />
-			</footer>
+			<Footer />
 		</div>
 	);
 };
