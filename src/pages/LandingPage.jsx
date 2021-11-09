@@ -6,12 +6,13 @@ import SecondInfo from '../components/learn-more/SecondInfo';
 import headerImage from '../assets/images/header_image.png';
 import About from '../components/learn-more/About';
 import UserReviews from '../components/learn-more/UserReviews';
+import Footer from '../components/footer/Footer';
 
 const LandingPage = () => {
 	return (
 		<div>
 			<header
-				className="grid grid-cols-2 gap-y-16 px-40"
+				className="h-screen grid grid-cols-2 content-between px-40"
 				style={{ backgroundImage: `url(${headerImage})` }}
 			>
 				<NavBar />
@@ -25,6 +26,10 @@ const LandingPage = () => {
 				<About />
 				<UserReviews />
 			</main>
+
+			<footer>
+				<Footer />
+			</footer>
 		</div>
 	);
 };
