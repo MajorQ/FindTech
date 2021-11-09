@@ -1,4 +1,4 @@
-const AboutHeaderBody = () => {
+const AboutUsBody = () => {
 	return (
 		<div className="grid grid-cols-2 gap-y-16 px-40 py-24">
 			<div className="col-span-1">
@@ -82,4 +82,4 @@ const AboutHeaderBody = () => {
 	);
 };
 
-export default AboutHeaderBody;
+export default AboutUsBody;

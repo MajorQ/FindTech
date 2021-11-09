@@ -40,45 +40,55 @@ const team2 = [
 	},
 ];
 
-const AboutProfile = () => {
+const AboutUsProfile = () => {
 	return (
-		<div className="w-screen bg-gray-100 py-20 px-10 ">
-			<div className="grid grid-cols-3 my-10 gap-x-5">
-				{team1.map((item) => {
-					return (
-						<div className="">
+		<main>
+			<div className="w-screen bg-gray-100 py-20 px-10 ">
+				<div className="grid grid-cols-3 my-10 gap-x-5">
+					{team1.map((item) => {
+						return (
 							<div className="">
-								<img className="mx-auto" src={item.photo} alt={item.name}></img>
+								<div className="">
+									<img
+										className="mx-auto"
+										src={item.photo}
+										alt={item.name}
+									></img>
+								</div>
+								<div className=" w-9/12 mt-5 bg-white rounded-3xl py-10 px-10 mx-auto ">
+									<h1 className=" font-extrabold text-3xl">{item.name}</h1>
+									<div className=" mt-5 w-full h-0.5 bg-gray-200" />
+									<h3 className="mt-3 font-extrabold text-xl ">{item.role}</h3>
+									<p className="mt-3 text-gray-400">{item.desc}</p>
+								</div>
 							</div>
-							<div className=" w-9/12 mt-5 bg-white rounded-3xl py-10 px-10 mx-auto ">
-								<h1 className=" font-extrabold text-3xl">{item.name}</h1>
-								<div className=" mt-5 w-full h-0.5 bg-gray-200" />
-								<h3 className="mt-3 font-extrabold text-xl ">{item.role}</h3>
-								<p className="mt-3 text-gray-400">{item.desc}</p>
-							</div>
-						</div>
-					);
-				})}
-			</div>
-			<div className="grid grid-cols-2 justify-center my-10">
-				{team2.map((item) => {
-					return (
-						<div className="">
+						);
+					})}
+				</div>
+				<div className="grid grid-cols-2 justify-center my-10">
+					{team2.map((item) => {
+						return (
 							<div className="">
-								<img className="mx-auto" src={item.photo} alt={item.name}></img>
+								<div className="">
+									<img
+										className="mx-auto"
+										src={item.photo}
+										alt={item.name}
+									></img>
+								</div>
+								<div className=" mx-auto w-6/12 mt-5 bg-white rounded-3xl py-10 px-10">
+									<h1 className=" font-extrabold text-3xl">{item.name}</h1>
+									<div className=" mt-5 w-full h-0.5 bg-gray-200" />
+									<h3 className="mt-3 font-extrabold text-xl ">{item.role}</h3>
+									<p className="mt-3 text-gray-400">{item.desc}</p>
+								</div>
 							</div>
-							<div className=" mx-auto w-6/12 mt-5 bg-white rounded-3xl py-10 px-10">
-								<h1 className=" font-extrabold text-3xl">{item.name}</h1>
-								<div className=" mt-5 w-full h-0.5 bg-gray-200" />
-								<h3 className="mt-3 font-extrabold text-xl ">{item.role}</h3>
-								<p className="mt-3 text-gray-400">{item.desc}</p>
-							</div>
-						</div>
-					);
-				})}
+						);
+					})}
+				</div>
 			</div>
-		</div>
+		</main>
 	);
 };
 
-export default AboutProfile;
+export default AboutUsProfile;

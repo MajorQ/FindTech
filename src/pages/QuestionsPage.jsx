@@ -1,11 +1,11 @@
 import NavBar from '../components/core/NavBar';
+import QuestionBody from '../components/question/QuestionBody';
 
 const QuestionsPage = () => {
 	return (
 		<div>
 			<NavBar />
-
-			<main className="grid grid-cols-2"></main>
+			<QuestionBody />
 		</div>
 	);
 };

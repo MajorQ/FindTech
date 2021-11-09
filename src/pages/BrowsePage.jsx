@@ -1,14 +1,11 @@
-import BodyBrowse from '../components/browse/BodyBrowse';
+import BrowseBody from '../components/browse/BrowseBody';
 import NavBar from '../components/core/NavBar';
 
 const BrowsePage = () => {
 	return (
 		<div>
 			<NavBar selected="Browse" />
-
-			<main>
-				<BodyBrowse />
-			</main>
+			<BrowseBody />
 		</div>
 	);
 };

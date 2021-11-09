@@ -1,6 +1,6 @@
 import background from '../assets/images/bg-aboutus.png';
-import AboutProfile from '../components/about-us/AboutProfile';
-import AboutHeaderBody from '../components/about-us/HeaderBody';
+import AboutUsProfile from '../components/about-us/AboutUsProfile';
+import AboutUsBody from '../components/about-us/AboutUsBody';
 import NavBar from '../components/core/NavBar';
 
 const AboutUsPage = () => {
@@ -14,11 +14,10 @@ const AboutUsPage = () => {
 					backgroundImage: `url(${background})`,
 				}}
 			>
-				<AboutHeaderBody />
+				<AboutUsBody />
 			</div>
-			<main>
-				<AboutProfile />
-			</main>
+
+			<AboutUsProfile />
 		</div>
 	);
 };
