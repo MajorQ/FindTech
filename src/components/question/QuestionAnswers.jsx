@@ -11,12 +11,14 @@ const QuestionAnswers = ({ answers, selectedAnswer, onSelect }) => {
 			{answers.map((answer, index) => {
 				const isSelected = index === selectedAnswer;
 				const borderColor = isSelected ? 'accent' : 'gray-300';
+				const bgColor = isSelected ? 'gray-100' : 'white';
 				const onClick = isSelected ? () => onSelect(-1) : () => onSelect(index);
 				return (
 					<AnswerPill
 						text={answer.text}
 						borderColor={borderColor}
 						onClick={onClick}
+						bgColor={bgColor}
 					/>
 				);
 			})}
@@ -24,10 +26,10 @@ const QuestionAnswers = ({ answers, selectedAnswer, onSelect }) => {
 	);
 };
 
-const AnswerPill = ({ text, borderColor, onClick }) => {
+const AnswerPill = ({ text, borderColor, onClick, bgColor }) => {
 	return (
 		<button
-			className={`transition duration-200 ease-in rounded-xl border-2 border-${borderColor} block w-full text-left p-6 my-4`}
+			className={`transition duration-200 ease-in bg-${bgColor} rounded-xl border-2 border-${borderColor} block w-full text-left p-6 my-4`}
 			onClick={onClick}
 		>
 			{text}
