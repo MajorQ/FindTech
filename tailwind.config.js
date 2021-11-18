@@ -10,6 +10,9 @@ module.exports = {
 			fontFamily: {
 				body: ['Open Sans'],
 			},
+			backgroundImage: {
+				'landing-bg': "url('./assets/images/header_image.png')",
+			},
 		},
 	},
 	variants: {
