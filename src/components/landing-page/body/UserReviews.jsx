@@ -1,6 +1,6 @@
 const UserReviews = () => {
 	return (
-		<div className="w-full flex flex-col items-center p-32">
+		<div className="w-full flex flex-col items-center p-8 md:p-32">
 			<h2 className="text-4xl text-left text-black font-bold tracking-tighter my-5">
 				User Reviews
 			</h2>
@@ -15,7 +15,7 @@ const UserReviews = () => {
 					helped me pick the best option for my needs!"
 				</span>
 			</p>
-			<div className="grid grid-cols-3 gap-x-32">
+			<div className="md:grid md:grid-cols-3 md:gap-x-32">
 				<UserBox
 					backgroundColor="bg-white"
 					textColor="text-black"
@@ -38,7 +38,7 @@ const UserReviews = () => {
 
 const UserBox = ({ userName, backgroundColor, textColor }) => {
 	return (
-		<div className={`flex items-stretch ${backgroundColor} py-8 pl-8 pr-32`}>
+		<div className={`flex items-stretch ${backgroundColor} p-8 md:pr-32`}>
 			{/* Circle Avatar */}
 			<div className="rounded-full bg-red-500 h-12 w-12 mx-4"></div>
 
