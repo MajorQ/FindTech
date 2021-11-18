@@ -15,7 +15,8 @@ const answers = [
 ];
 
 const QuestionPage = () => {
-	var [selectedAnswer, selectAnswer] = useState(-1);
+	let [selectedAnswer, selectAnswer] = useState(-1);
+
 	return (
 		<div>
 			<NavBar />
