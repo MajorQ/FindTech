@@ -1,7 +1,7 @@
 const HeaderBody = () => {
 	return (
 		<section className="md:col-span-1 my-10 md:m-0">
-			<h1 className="text-2xl md:text-6xl font-bold leading-tight my-4">
+			<h1 className="text-4xl md:text-6xl font-bold leading-tight my-4">
 				<span className="text-white">Where the perfect tech </span>
 				<span className="text-accent">finds </span>
 				<span className="text-white">you</span>

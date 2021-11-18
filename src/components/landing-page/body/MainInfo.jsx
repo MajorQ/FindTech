@@ -3,11 +3,11 @@ import RoundedButton from '../../core/RoundedButton.jsx';
 
 const MainInfo = () => {
 	return (
-		<div className="container grid grid-cols-2 mt-20">
+		<div className="container md:grid md:grid-cols-2 mt-20">
 			<div className="">
 				<img src={image_maininfo} alt="" width="754" height="650" />
 			</div>
-			<div className="max-w-xl ml-32 flex flex-col justify-center items-left ">
+			<div className="max-w-xl flex flex-col justify-center items-left ml-16 mr-8 md:ml-32">
 				<div className="w-44 h-1 bg-gradient-to-r from-yellow-400 to-black"></div>
 				<div className="my-5">
 					<h2 className="text-4xl text-left text-black font-bold tracking-tighter">
