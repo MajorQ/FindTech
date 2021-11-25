@@ -9,15 +9,15 @@ const priceRange = [];
 const BrowseBody = () => {
 	return (
 		<main>
-			<div className="bg-gray-100 px-52 py-10">
+			<div className="bg-gray-100 px-8 md:px-52 py-10">
 				<GradientLine />
-				<h1 className="text-4xl text-left text-black font-bold tracking-tighter my-5">
+				<h1 className="text-2xl md:text-4xl text-left text-black font-bold tracking-tighter my-5">
 					Browse Recommendations
 				</h1>
 
-				<div className=" my-16 w-full h-32 rounded-2xl grid grid-cols-4 bg-white shadow-md p-12">
-					<div>
-						<label htmlFor="select" className=" font-bold mx-5">
+				<div className="w-full h-48 md:h-32 rounded-2xl md:grid md:grid-cols-4 bg-white shadow-md p-4 md:p-12 my-8 md:my-16">
+					<div className="flex justify-between md:inline-block py-2 md:py-0">
+						<label htmlFor="select" className=" font-bold md:mx-5">
 							Popularity
 						</label>
 						<select name="Popularity" id="" className="font-bold">
@@ -25,10 +25,10 @@ const BrowseBody = () => {
 								return <option value={select}>{select}</option>;
 							})}
 						</select>
-						<label className="ml-5">⭐</label>
+						<label className="hidden md:inline-block ml-5">⭐</label>
 					</div>
-					<div>
-						<label htmlFor="select" className="font-bold mx-5">
+					<div className="flex justify-between md:block py-2 md:py-0">
+						<label htmlFor="select" className="font-bold md:mx-5">
 							Filter by User
 						</label>
 						<select name="filter-by-user" id="" className="font-bold">
@@ -37,8 +37,8 @@ const BrowseBody = () => {
 							})}
 						</select>
 					</div>
-					<div>
-						<label htmlFor="select" className=" font-bold mx-5">
+					<div className="flex justify-between md:inline-block py-2 md:py-0">
+						<label htmlFor="select" className="font-bold md:mx-5">
 							Filter by OS
 						</label>
 						<select name="filter-by-os" id="" className="font-bold">
@@ -48,7 +48,7 @@ const BrowseBody = () => {
 						</select>
 					</div>
 					<div>
-						<label htmlFor="select" className=" font-bold mx-5">
+						<label htmlFor="select" className=" font-bold md:mx-5">
 							Price
 						</label>
 						<select name="price" id="" className="font-bold">
@@ -58,27 +58,28 @@ const BrowseBody = () => {
 						</select>
 					</div>
 				</div>
-				<div className=" grid grid-cols-3 gap-10">
+
+				<div className="md:grid md:grid-cols-3 md:gap-10">
 					{laptopData.map((items) => {
 						return (
-							<div className=" h-96 w-9/12 bg-white rounded-3xl mx-auto shadow-lg">
-								<div className=" h-3/5 rounded-t-3xl">
+							<div className="md:h-96 bg-white rounded-3xl mx-auto shadow-lg my-10 md:my-0">
+								<div className="h-1/2 md:h-3/5 rounded-t-3xl">
 									<img
 										src={items.image}
 										alt={items.productName}
-										className=" h-full w-full object-fill rounded-t-3xl"
+										className=" h-full w-full object-cover rounded-t-3xl"
 									/>
 								</div>
-								<div className="px-10 py-8">
+								<div className="px-10 py-4 md:py-8">
 									<p className="text-black font-bold text-xl">
 										{items.productName}
 									</p>
 								</div>
-								<div className="grid grid-cols-3 justify-items-center">
+								<div className="flex flex-col justify-evenly md:grid md:grid-cols-3 md:justify-items-center px-4 py-4 md:p-0">
 									<div>
 										<p className="font-bold">{items.storage.slice(0, 6)}</p>
 									</div>
-									<div className="">
+									<div className="flex items-center md:block">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											class="h-3 w-3"
@@ -91,11 +92,11 @@ const BrowseBody = () => {
 												clip-rule="evenodd"
 											/>
 										</svg>
-										<p className=" text-sm font-bold">
+										<p className="text-sm font-bold">
 											{items.screen.slice(0, 2) + '"'}
 										</p>
 									</div>
-									<div>
+									<div className="flex items-center md:block">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											class="h-3 w-3"
@@ -109,7 +110,7 @@ const BrowseBody = () => {
 												clip-rule="evenodd"
 											/>
 										</svg>
-										<p className=" text-xs font-bold">{items.cpu}</p>
+										<p className="text-xs font-bold">{items.cpu}</p>
 									</div>
 								</div>
 							</div>
