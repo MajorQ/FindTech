@@ -1,3 +1,5 @@
+import ContactUsForm from './ContactUsForm';
+
 const AboutUsBody = () => {
 	return (
 		<div className="md:grid md:grid-cols-2 md:gap-y-16 px-8 md:px-40 py-6 md:py-24">
@@ -20,63 +22,9 @@ const AboutUsBody = () => {
 					or found something of your interest, you can contact us
 				</p>
 			</div>
-			<div className="w-1/2 bg-white justify-self-center rounded-3xl shadow-lg">
-				<div className="flex flex-col justify-center items-center ">
-					<h1 className=" my-5 font-bold text-3xl">
-						<span className="text-black">Contact</span>
-						<span className="text-accent "> Us</span>
-					</h1>
-					<form action="" className="space-y-4">
-						<div>
-							<input
-								type="text"
-								placeholder="Name"
-								className="ring ring-gray-100 rounded-md px-4 py-4  outline-none"
-							/>
-						</div>
 
-						<div>
-							<input
-								type="text"
-								placeholder="Phone"
-								className="ring ring-gray-100 rounded-md px-4 py-4 outline-none"
-							/>
-						</div>
-
-						<div>
-							<input
-								type="text"
-								placeholder="Email"
-								className="ring ring-gray-100 rounded-md px-4 py-4  outline-none"
-							/>
-						</div>
-
-						<div>
-							<textarea
-								type="text"
-								placeholder="Hello, I found a problem in..."
-								className="ring ring-gray-100 rounded-md px-4 py-4 outline-none"
-							/>
-						</div>
-					</form>
-
-					<button className="bg-black w-1/2 font-bold rounded-tr-xl px-4 py-2 my-5 text-center">
-						<span className="px-1 text-sm text-white">Send to us </span>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							className="h-6 w-6 inline-block stroke-current text-accent"
-							fill="none"
-							viewBox="0 0 24 24"
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth={2}
-								d="M17 8l4 4m0 0l-4 4m4-4H3"
-							/>
-						</svg>
-					</button>
-				</div>
+			<div className="w-1/2 hidden md:block justify-self-center">
+				<ContactUsForm />
 			</div>
 		</div>
 	);
