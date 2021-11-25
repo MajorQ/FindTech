@@ -10,7 +10,7 @@ import Footer from '../components/landing-page/footer/Footer';
 const LandingPage = () => {
 	return (
 		<div>
-			<header className="w-full h-screen bg-landing-bg md:grid md:grid-cols-2 md:content-between px-6 md:px-20 lg:px-40">
+			<header className="w-full h-screen bg-landing-header bg-cover md:grid md:grid-cols-2 md:content-between px-6 md:px-20 lg:px-40">
 				<NavBar />
 				<HeaderBody />
 				<HeaderButton />

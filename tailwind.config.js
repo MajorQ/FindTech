@@ -11,7 +11,8 @@ module.exports = {
 				body: ['Open Sans'],
 			},
 			backgroundImage: {
-				'landing-bg': "url('./assets/images/header_image.png')",
+				'landing-header': "url('./assets/images/header_landing.png')",
+				'about-us-header': "url('./assets/images/header_about_us.png')",
 			},
 		},
 	},
