@@ -76,7 +76,7 @@ const AboutUsProfile = () => {
 										alt={item.name}
 									></img>
 								</div>
-								<div className=" mx-auto md:w-6/12 mt-5 bg-white rounded-3xl py-10 px-10">
+								<div className=" mx-auto md:w-6/12 mt-5 bg-white rounded-3xl py-10 px-10 my-5">
 									<h1 className=" font-extrabold text-3xl">{item.name}</h1>
 									<div className=" mt-5 w-full h-0.5 bg-gray-200" />
 									<h3 className="mt-3 font-extrabold text-xl ">{item.role}</h3>

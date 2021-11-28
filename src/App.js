@@ -6,22 +6,25 @@ import './App.css';
 import AboutUsPage from './pages/AboutUsPage';
 import BrowsePage from './pages/BrowsePage';
 import QuestionsPage from './pages/QuestionPage';
+import ScrollToTop from './components/core/ScrollToTop';
 
 const App = () => {
 	return (
 		<div className="App">
 			<BrowserRouter>
-				<Switch>
-					<Route exact path="/" component={LandingPage} />
-					<Route path="/about-us" component={AboutUsPage} />
-					<Route path="/browse" component={BrowsePage} />
+				<ScrollToTop>
+					<Switch>
+						<Route exact path="/" component={LandingPage} />
+						<Route path="/about-us" component={AboutUsPage} />
+						<Route path="/browse" component={BrowsePage} />
 
-					{/* TODO: Dynamic path*/}
-					<Route path="/question" component={QuestionsPage} />
+						{/* TODO: Dynamic path*/}
+						<Route path="/question" component={QuestionsPage} />
 
-					{/* TODO: 404 not found */}
-					<Route path="/" component={LandingPage} />
-				</Switch>
+						{/* TODO: 404 not found */}
+						<Route path="/" component={LandingPage} />
+					</Switch>
+				</ScrollToTop>
 			</BrowserRouter>
 		</div>
 	);
