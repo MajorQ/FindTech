@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 import NavBarBurger from './NavBarBurger';
-import navBarItems from '../../utils/consts';
+import { navBarItems } from '../../utils/consts';
 import NavBarItemsText from './NavBarItemsText';
 
 const NavBar = ({ selected }) => {

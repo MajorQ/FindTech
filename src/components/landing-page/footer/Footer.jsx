@@ -1,7 +1,10 @@
 import logo from '../../../assets/images/logo.svg';
 import RoundedButton from '../../core/RoundedButton';
+// import { useHistory } from 'react-router-dom';
 
 const Footer = () => {
+	// const history = useHistory();
+
 	return (
 		<footer className="w-full bg-gradient-to-r from-black to-accent_dark divide-solid divide-y-2 divide-gray-800 px-8 md:px-32 py-24">
 			<div className="flex flex-col md:flex-row md:justify-between items-center mb-16">
@@ -14,6 +17,7 @@ const Footer = () => {
 					arrowColor="white"
 					backgroundColor="accent"
 					textColor="black"
+					onClick={() => {}}
 				/>
 			</div>
 

@@ -1,0 +1,257 @@
+[
+	{
+		"text": "What’s your budget?",
+		"answers": [
+			{
+				"text": "Up to 5 million",
+				"values": {
+					"price": 5000000
+				}
+			},
+			{
+				"text": "Up to 8 million",
+				"values": {
+					"price": 80000000
+				}
+			},
+			{
+				"text": "Up to 15 million",
+				"values": {
+					"price": 150000000
+				}
+			},
+			{
+				"text": "Up to 20 million",
+				"values": {
+					"price": 200000000
+				}
+			},
+			{
+				"text": "Up to 30 million",
+				"values": {
+					"price": 300000000
+				}
+			},
+			{
+				"text": "Over 30 million",
+				"values": {
+					"price": 500000000
+				}
+			}
+		]
+	},
+	{
+		"text": "What type of laptop preference do you have?",
+		"answers": [
+			{
+				"text": "Flexible",
+				"values": {
+					"style": 0
+				}
+			},
+			{
+				"text": "Casual",
+				"values": {
+					"style": 1
+				}
+			},
+			{
+				"text": "Gaming",
+				"values": {
+					"style": 2
+				}
+			},
+			{
+				"text": "Education",
+				"values": {
+					"style": 3
+				}
+			},
+			{
+				"text": "Business",
+				"values": {
+					"style": 4
+				}
+			}
+		]
+	},
+	{
+		"text": "How mobile is your lifestyle?",
+		"answers": [
+			{
+				"text": "Very high mobility",
+				"values": {
+					"weight": 1.35
+				}
+			},
+			{
+				"text": "High mobility",
+				"values": {
+					"weight": 1.5
+				}
+			},
+			{
+				"text": "Medium mobility",
+				"values": {
+					"weight": 1.65
+				}
+			},
+			{
+				"text": "Low mobility",
+				"values": {
+					"weight": 1.8
+				}
+			},
+			{
+				"text": "Rarely moving around",
+				"values": {
+					"weight": 1.95
+				}
+			}
+		]
+	},	
+	{
+		"text": "Size of display screen",
+		"answers": [
+			{
+				"text": "Small",
+				"values": {
+					"size": 0
+				}
+			},
+			{
+				"text": "Medium",
+				"values": {
+					"size": 1
+				}
+			},
+			{
+				"text": "Large",
+				"values": {
+					"size": 2
+				}
+			}
+		]
+	},	
+	{
+		"text": "What type of Operating System (OS) do you prefer?",
+		"answers": [
+			{
+				"text": "Anything",
+				"values": {
+					"os": 0
+				}
+			},
+			{
+				"text": "Windows",
+				"values": {
+					"os": 1
+				}
+			},
+			{
+				"text": "MacOS",
+				"values": {
+					"os": 2
+				}
+			}
+		]
+	},	
+	{
+		"text": "To enhance your viewing experience, what will you be using your laptop for?",
+		"answers": [
+			{
+				"text": "Office/Education",
+				"values": {
+					"ips": false,
+					"resolution": 0
+				}
+			},
+			{
+				"text": "Browsing",
+				"values": {
+					"ips": false,
+					"resolution": 1
+				}
+			},
+			{
+				"text": "Entertainment",
+				"values": {
+					"ips": true,
+					"resolution": 1
+				}
+			},
+			{
+				"text": "Gaming",
+				"values": {
+					"ips": true,
+					"resolution": 2
+				}
+			},
+			{
+				"text": "Design",
+				"values": {
+					"ips": true,
+					"resolution": 3
+				}
+			}
+		]
+	},
+	{
+		"text": "How will you be using your laptop storage?",
+		"answers": [
+			{
+				"text": "For school work",
+				"values": {
+					"storageSize": 0,
+					"storageType": 0
+				}
+			},
+			{
+				"text": "For office documents",
+				"values": {
+					"storageSize": 1,
+					"storageType": 0
+				}
+			},
+			{
+				"text": "For multimedia storage",
+				"values": {
+					"storageSize": 2,
+					"storageType": 1
+				}
+			},
+			{
+				"text": "For game storage",
+				"values": {
+					"storageSize": 3,
+					"storageType": 1
+				}
+			},
+			{
+				"text": "Content creation storage",
+				"values": {
+					"storageSize": 4,
+					"storageType": 1
+				}
+			}
+		]
+	},
+	{
+		"text": "Do you need additional features such as touchscreen and webcam?",
+		"type": "multiselect",
+		"answers": [
+			{
+				"text": "Webcam",
+				"values": {
+					"webcam": true
+				}
+			},
+			{
+				"text": "Touchscreen",
+				"values": {
+					"touch": true
+				}
+			}
+		]
+	}
+]

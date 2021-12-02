@@ -6,10 +6,12 @@ const RoundedButton = ({
 	textColor,
 	backgroundColor,
 	arrowColor,
+	onClick,
 }) => {
 	return (
 		<Link to={link}>
 			<button
+				onClick={onClick}
 				className={`flex justify-evenly bg-${backgroundColor} rounded-tr-xl w-48 px-4 py-6`}
 			>
 				<span className={`text-${textColor} font-bold text-sm pr-2`}>

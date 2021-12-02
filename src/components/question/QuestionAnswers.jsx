@@ -1,6 +1,6 @@
-const QuestionAnswers = ({ answers, selectedAnswer, onSelect }) => {
+const QuestionAnswers = ({ answers, selectedAnswer, onClick }) => {
 	return (
-		<div className="w-2/3 h-1/2 bg-white rounded-2xl py-4 px-8">
+		<div className="w-full bg-white rounded-2xl py-4 px-8">
 			<div className="bg-gray-100 rounded-xl p-4">
 				<h2 className="text-xl">
 					<span className="">Select your</span>
@@ -12,12 +12,11 @@ const QuestionAnswers = ({ answers, selectedAnswer, onSelect }) => {
 				const isSelected = index === selectedAnswer;
 				const borderColor = isSelected ? 'accent' : 'gray-300';
 				const bgColor = isSelected ? 'gray-100' : 'white';
-				const onClick = isSelected ? () => onSelect(-1) : () => onSelect(index);
 				return (
 					<AnswerPill
 						text={answer.text}
 						borderColor={borderColor}
-						onClick={onClick}
+						onClick={() => onClick(index)}
 						bgColor={bgColor}
 					/>
 				);

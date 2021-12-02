@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Url } from '../../utils/consts';
 import GradientLine from '../core/GradientLine';
 import LaptopItems from './LaptopItems';
 
@@ -20,7 +21,7 @@ const BrowseBody = () => {
 	const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
 	useEffect(() => {
-		fetch('/laptops')
+		fetch(Url.browse)
 			.then((response) => response.json())
 			.then((json) => setLaptop(json));
 	}, [laptop.length]);
