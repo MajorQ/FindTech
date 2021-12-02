@@ -13,9 +13,9 @@ const priceRange = [
 const BrowseBody = () => {
 	const [laptop, setLaptop] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [itemsPerPage, setItemsPerPage] = useState(6);
+	const [itemsPerPage] = useState(6);
 
-	const [pageNumberLimit, setPageNumberLimit] = useState(5);
+	const [pageNumberLimit] = useState(5);
 	const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
 	const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
