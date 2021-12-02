@@ -3,13 +3,7 @@ import { useState } from 'react';
 import NavBarBurger from '../../core/NavBarBurger';
 import NavBarItemsText from '../../core/NavBarItemsText';
 import logo from '../../../assets/images/logo.svg';
-
-const navBarItems = [
-	{ title: 'Browse', link: '/browse' },
-	// { title: 'How it Works', link: '' },
-	// { title: 'Documentation', link: '' },
-	{ title: 'About Us', link: '/about-us' },
-];
+import navBarItems from '../../../utils/consts';
 
 const NavBar = () => {
 	let [showNavBarItems, setShowNavBarItems] = useState(false);

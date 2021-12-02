@@ -2,14 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 import NavBarBurger from './NavBarBurger';
+import navBarItems from '../../utils/consts';
 import NavBarItemsText from './NavBarItemsText';
-
-const navBarItems = [
-	{ title: 'Browse', link: '/browse' },
-	// { title: 'How it Works', link: '' },
-	// { title: 'Documentation', link: '' },
-	{ title: 'About Us', link: '/about-us' },
-];
 
 const NavBar = ({ selected }) => {
 	let [showNavBarItems, setShowNavBarItems] = useState(false);
