@@ -1,5 +1,5 @@
 const AnswerBox = ({ text, onClick, isSelected }) => {
-	const bgColor = isSelected ? 'gray-100' : 'white';
+	const bgColor = isSelected ? 'accent' : 'white';
 	const borderColor = isSelected ? 'accent' : 'gray-300';
 
 	return (

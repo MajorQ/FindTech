@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import NavBar from '../components/core/NavBar';
 import Questions from '../assets/json/questions.json';
-import QuestionPrompt from '../components/question/Question';
+import Question from '../components/question/Question';
 import AnswerSingle from '../components/question/AnswerSingle';
 import AnswerMutliple from '../components/question/AnswerMultiple';
 import ArrowButton from '../components/core/ArrowButton';
@@ -122,9 +122,10 @@ const QuestionPage = () => {
 					></ArrowButton>
 				</div>
 				<main className="md:col-span-3 flex flex-col justify-evenly items-center py-8">
-					<QuestionPrompt
+					<Question
 						questionNumber={questionIndex + 1}
 						questionText={question.text}
+						totalQuestions={Questions.length}
 					/>
 
 					<AnswerComponent />
