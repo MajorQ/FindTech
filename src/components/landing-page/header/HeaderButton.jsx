@@ -2,8 +2,11 @@ import { Link } from 'react-router-dom';
 
 const HeaderButton = () => {
 	return (
-		<Link to="/question" className="md:col-span-2 container bg-accent ">
-			<button className="text-left my-10 md:m-0 px-4 py-6">
+		<Link
+			to="/question"
+			className="md:col-span-2 container bg-accent my-10 md:m-0 px-4 py-6"
+		>
+			<button className="text-left">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					className="h-6 w-6 md:h-12 md:w-12 inline-block"

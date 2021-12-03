@@ -7,3 +7,8 @@ export const Url = {
 	browse: '/laptops',
 	predict: '/predict',
 };
+
+export const QuestionTypes = Object.freeze({
+	single: 'single',
+	multi: 'multi',
+});

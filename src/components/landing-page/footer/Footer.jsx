@@ -18,6 +18,7 @@ const Footer = () => {
 					backgroundColor="accent"
 					textColor="black"
 					onClick={() => {}}
+					link="/question"
 				/>
 			</div>
 

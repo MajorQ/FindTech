@@ -37,10 +37,7 @@ const NavBar = () => {
 					})}
 
 					<Link to="/question">
-						<button
-							className="bg-accent rounded-tr-2xl px-8 py-2"
-							onClick={() => console.log('bruh')}
-						>
+						<button className="bg-accent rounded-tr-2xl px-8 py-2">
 							<span className="font-bold text-sm pr-2">Find Laptops</span>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

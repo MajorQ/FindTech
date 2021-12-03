@@ -1,6 +1,8 @@
+
 [
 	{
 		"text": "What’s your budget?",
+		"type": "single",
 		"answers": [
 			{
 				"text": "Up to 5 million",
@@ -42,6 +44,7 @@
 	},
 	{
 		"text": "What type of laptop preference do you have?",
+		"type": "single",
 		"answers": [
 			{
 				"text": "Flexible",
@@ -77,6 +80,7 @@
 	},
 	{
 		"text": "How mobile is your lifestyle?",
+		"type": "single",
 		"answers": [
 			{
 				"text": "Very high mobility",
@@ -109,9 +113,10 @@
 				}
 			}
 		]
-	},	
+	},
 	{
 		"text": "Size of display screen",
+		"type": "single",
 		"answers": [
 			{
 				"text": "Small",
@@ -132,9 +137,10 @@
 				}
 			}
 		]
-	},	
+	},
 	{
 		"text": "What type of Operating System (OS) do you prefer?",
+		"type": "single",
 		"answers": [
 			{
 				"text": "Anything",
@@ -155,9 +161,10 @@
 				}
 			}
 		]
-	},	
+	},
 	{
 		"text": "To enhance your viewing experience, what will you be using your laptop for?",
+		"type": "single",
 		"answers": [
 			{
 				"text": "Office/Education",
@@ -198,6 +205,7 @@
 	},
 	{
 		"text": "How will you be using your laptop storage?",
+		"type": "single",
 		"answers": [
 			{
 				"text": "For school work",
@@ -238,19 +246,15 @@
 	},
 	{
 		"text": "Do you need additional features such as touchscreen and webcam?",
-		"type": "multiselect",
+		"type": "multiple",
 		"answers": [
 			{
 				"text": "Webcam",
-				"values": {
-					"webcam": true
-				}
+				"value": "webcam"
 			},
 			{
 				"text": "Touchscreen",
-				"values": {
-					"touch": true
-				}
+				"value": "touch"
 			}
 		]
 	}
