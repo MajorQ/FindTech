@@ -25,19 +25,24 @@ const NavBar = ({ selected }) => {
 
 					{/* Buttons */}
 					<div className="hidden md:flex w-2/3 justify-evenly items-center">
-						{navBarItems.map((item) => {
+						{navBarItems.map((item, index) => {
 							if (item.title === selected) {
 								return (
 									<Link
 										to={item.link}
 										className="text-accent text-xs font-bold"
+										key={`NavBarItem-${index}`}
 									>
 										{item.title}
 									</Link>
 								);
 							} else {
 								return (
-									<Link to={item.link} className="text-white text-xs font-bold">
+									<Link
+										to={item.link}
+										className="text-white text-xs font-bold"
+										key={`NavBarItem-${index}`}
+									>
 										{item.title}
 									</Link>
 								);

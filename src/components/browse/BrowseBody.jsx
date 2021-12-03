@@ -88,9 +88,13 @@ const BrowseBody = () => {
 							Filter by Price
 						</label>
 						<select name="price" id="" className="font-bold  rounded-xl">
-							{priceRange.map((select) => {
+							{priceRange.map((select, index) => {
 								return (
-									<option value={select} className=" bg-white">
+									<option
+										value={select}
+										className=" bg-white"
+										key={`Laptop-${index}`}
+									>
 										{select}
 									</option>
 								);

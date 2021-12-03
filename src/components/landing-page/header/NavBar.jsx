@@ -29,7 +29,7 @@ const NavBar = () => {
 							<Link
 								to={item.link}
 								className="text-white text-xs font-bold"
-								key={`NavBarItem-${index}`}
+								key={`LandingNavBarItem-${index}`}
 							>
 								{item.title}
 							</Link>

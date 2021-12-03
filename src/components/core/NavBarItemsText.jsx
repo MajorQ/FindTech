@@ -10,7 +10,7 @@ const NavBarItemsText = ({ navBarItems, showNavBarItems, selected }) => {
 						<Link
 							to={item.link}
 							className={`block text-${textColor} text-xs text-right font-bold pt-4`}
-							key={`NavBarItem-${index}`}
+							key={`NavBarItemText-${index}`}
 						>
 							{item.title}
 						</Link>

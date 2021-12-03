@@ -45,9 +45,9 @@ const AboutUsProfile = () => {
 		<main>
 			<div className="w-full bg-gray-100 py-10 md:py-20 px-10">
 				<div className="md:grid md:grid-cols-3 md:gap-x-5 my-10">
-					{team1.map((item) => {
+					{team1.map((item, index) => {
 						return (
-							<div className="">
+							<div className="" key={`Profile-Team 1-${index}`}>
 								<div className="">
 									<img
 										className="mx-auto"
@@ -66,9 +66,9 @@ const AboutUsProfile = () => {
 					})}
 				</div>
 				<div className="md:grid md:grid-cols-2 md:justify-center my-10">
-					{team2.map((item) => {
+					{team2.map((item, index) => {
 						return (
-							<div className="">
+							<div className="" key={`Profile-Team 2-${index}`}>
 								<div className="">
 									<img
 										className="mx-auto"
