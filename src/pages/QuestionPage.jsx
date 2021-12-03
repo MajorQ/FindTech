@@ -5,6 +5,7 @@ import QuestionPrompt from '../components/question/Question';
 import AnswerSingle from '../components/question/AnswerSingle';
 import AnswerMutliple from '../components/question/AnswerMultiple';
 import ArrowButton from '../components/core/ArrowButton';
+import { useHistory } from 'react-router-dom';
 
 const getInitialAnswers = () => {
 	return Questions.map((question) => {
@@ -21,6 +22,7 @@ const QuestionPage = () => {
 	const [questionIndex, setQuestionIndex] = useState(0);
 	const [selectedAnswers, setSelectedAnswers] = useState(getInitialAnswers());
 	const question = Questions.at(questionIndex);
+	const history = useHistory();
 
 	const onSelectSingleAnswer = (newAnswer) => {
 		const previousAnswer = selectedAnswers[questionIndex];
@@ -77,53 +79,13 @@ const QuestionPage = () => {
 				request = { ...request, ...question.answers.at(selectedIndex).values };
 			});
 
-			console.log(request);
+			history.replace({ pathname: '/result', state: request });
 
 			return;
 		}
 
 		setQuestionIndex(questionIndex + 1);
 	};
-
-	// if (Object.keys(data).length !== 0) {
-	// 	const result = data.result;
-
-	// 	return (
-	// 		<div className="w-full h-full flex flex-col bg-gray-100 px-16">
-	// 			<NavBar />
-	// 			<strong className="text-3xl py-8">Your result is...</strong>
-
-	// 			<div className="bg-white px-16 mx-24 my-12 rounded-2xl">
-	// 				<h1 className="text-4xl font-bold py-8">{result[0].name}</h1>
-	// 				<div className="h-96 w-96 mx-auto">
-	// 					<img src={result[0].image} alt="Laptop" className="mx-auto" />
-	// 				</div>
-	// 				<div className="flex justify-end">
-	// 					<h2 className="text-3xl font-bold text-accent">{`Rp. ${result[0].price}`}</h2>
-	// 				</div>
-	// 			</div>
-
-	// 			<h3 className="text-2xl">Other results...</h3>
-
-	// 			{result.map((laptop, index) => {
-	// 				return (
-	// 					<div
-	// 						className="bg-white py-4 px-16 mx-56 my-4 rounded-2xl"
-	// 						key={`Laptop-${index}`}
-	// 					>
-	// 						<h1 className="text-2xl font-bold py-8">{laptop.name}</h1>
-	// 						<div className="h-48 w-48 mx-auto">
-	// 							<img src={laptop.image} alt="Laptop" className="mx-auto" />
-	// 						</div>
-	// 						<div className="flex justify-end">
-	// 							<h2 className="text-lg font-bold text-accent">{`Rp. ${laptop.price}`}</h2>
-	// 						</div>
-	// 					</div>
-	// 				);
-	// 			})}
-	// 		</div>
-	// 	);
-	// }
 
 	const AnswerComponent = () => {
 		switch (question.type) {
