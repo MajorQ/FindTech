@@ -57,7 +57,27 @@ const QuestionPage = () => {
 
 	const goToNextQuestion = () => {
 		if (questionIndex + 1 === Questions.length) {
-			console.log(selectedAnswers);
+			let request = {};
+
+			// This is so ugly but it works haha
+			Questions.forEach((question, index) => {
+				const selectedIndex = selectedAnswers[index];
+
+				if (question.type === 'multiple') {
+					question.answers.forEach((answer, index2) => {
+						request = {
+							...request,
+							...{ [answer.value]: selectedIndex[index2] },
+						};
+					});
+
+					return;
+				}
+
+				request = { ...request, ...question.answers.at(selectedIndex).values };
+			});
+
+			console.log(request);
 
 			return;
 		}
