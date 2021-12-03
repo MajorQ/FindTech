@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import NavBar from '../components/core/NavBar';
 import { Url } from '../utils/consts';
+import { formatter } from '../utils/fomatter';
 
 const ResultPage = (props) => {
 	const request = props.location.state;
@@ -41,7 +42,9 @@ const ResultPage = (props) => {
 						<img src={result[0].image} alt="Laptop" className="mx-auto" />
 					</div>
 					<div className="flex justify-end">
-						<h2 className="text-3xl font-bold text-accent">{`Rp. ${result[0].price}`}</h2>
+						<h2 className="text-3xl font-bold text-accent">
+							{formatter.format(`${result[0].price}`)}
+						</h2>
 					</div>
 				</div>
 
@@ -49,6 +52,7 @@ const ResultPage = (props) => {
 
 				{/* Slice removes first index */}
 				{result.slice(1).map((laptop, index) => {
+					const price = formatter.format(`${laptop.price}`);
 					return (
 						<div
 							className="bg-white py-4 px-16 mx-56 my-4 rounded-2xl"
@@ -59,7 +63,7 @@ const ResultPage = (props) => {
 								<img src={laptop.image} alt="Laptop" className="mx-auto" />
 							</div>
 							<div className="flex justify-end">
-								<h2 className="text-lg font-bold text-accent">{`Rp. ${laptop.price}`}</h2>
+								<h2 className="text-lg font-bold text-accent">{price}</h2>
 							</div>
 						</div>
 					);
