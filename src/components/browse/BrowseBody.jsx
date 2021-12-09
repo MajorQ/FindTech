@@ -21,9 +21,14 @@ const BrowseBody = () => {
 	const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
 	useEffect(() => {
-		fetch(Url.browse)
-			.then((response) => response.json())
-			.then((json) => setLaptop(json));
+		async function fetchData() {
+			try {
+				await fetch(Url.browse)
+					.then((response) => response.json())
+					.then((json) => setLaptop(json));
+			} catch (e) {}
+		}
+		fetchData();
 	}, [laptop.length]);
 
 	const pages = [];
@@ -73,6 +78,10 @@ const BrowseBody = () => {
 			setMinPageNumberLimit(minPageNumberLimit - pageNumberLimit);
 		}
 	};
+
+	if (laptop.length === 0) {
+		return <div>Loading...</div>;
+	}
 
 	return (
 		<main>
