@@ -4,8 +4,8 @@ export const navBarItems = [
 ];
 
 export const Url = {
-	browse: '/api/laptops',
-	predict: '/api/predict',
+	browse: '/laptops',
+	predict: '/predict',
 };
 
 export const QuestionTypes = Object.freeze({
