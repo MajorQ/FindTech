@@ -15,7 +15,7 @@ const UserReviews = () => {
 					helped me pick the best option for my needs!"
 				</span>
 			</p>
-			<div className="md:grid md:grid-cols-3 md:gap-x-32">
+			{/* <div className="md:grid md:grid-cols-3 md:gap-x-32">
 				<UserBox
 					backgroundColor="bg-white"
 					textColor="text-black"
@@ -31,24 +31,24 @@ const UserReviews = () => {
 					textColor="text-black"
 					userName="Jason Statham"
 				/>
-			</div>
+			</div> */}
 		</div>
 	);
 };
 
-const UserBox = ({ userName, backgroundColor, textColor }) => {
-	return (
-		<div className={`flex items-stretch ${backgroundColor} p-8 md:pr-32`}>
-			{/* Circle Avatar */}
-			<div className="rounded-full bg-red-500 h-12 w-12 mx-4"></div>
+// const UserBox = ({ userName, backgroundColor, textColor }) => {
+// 	return (
+// 		<div className={`flex items-stretch ${backgroundColor} p-8 md:pr-32`}>
+// 			{/* Circle Avatar */}
+// 			<div className="rounded-full bg-red-500 h-12 w-12 mx-4"></div>
 
-			{/* Client Info */}
-			<div className="flex flex-col justify-between">
-				<p className={`${textColor} font-bold text-sm`}>{userName}</p>
-				<p className="text-gray-400 text-sm">Client</p>
-			</div>
-		</div>
-	);
-};
+// 			{/* Client Info */}
+// 			<div className="flex flex-col justify-between">
+// 				<p className={`${textColor} font-bold text-sm`}>{userName}</p>
+// 				<p className="text-gray-400 text-sm">Client</p>
+// 			</div>
+// 		</div>
+// 	);
+// };
 
 export default UserReviews;

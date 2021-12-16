@@ -30,7 +30,7 @@ const BrowseBody = () => {
 					Browse Recommendations
 				</h1>
 
-				<div className="w-full h-48 md:h-32 rounded-2xl  bg-white shadow-md p-4 md:p-12 my-8 md:my-16">
+				<div className="flex flex-col gap-y-4 md:block w-full h-48 md:h-32 rounded-2xl  bg-white shadow-md p-4 md:p-12 my-8 md:my-16">
 					<FilterComponent
 						title="Pagination"
 						items={PaginationTypes}

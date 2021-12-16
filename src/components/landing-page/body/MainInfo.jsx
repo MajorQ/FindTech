@@ -1,5 +1,5 @@
 import image_maininfo from '../../../assets/images/image_maininfo.png';
-import RoundedButton from '../../core/RoundedButton.jsx';
+// import RoundedButton from '../../core/RoundedButton.jsx';
 
 const MainInfo = () => {
 	return (
@@ -22,12 +22,12 @@ const MainInfo = () => {
 						through AI algorithm, so your recommendations will be personalized
 						to your needs.
 					</p>
-					<RoundedButton
+					{/* <RoundedButton
 						label="Learn More"
 						arrowColor="accent"
 						backgroundColor="black"
 						textColor="white"
-					/>
+					/> */}
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 import image_secondinfo from '../../../assets/images/image_secondinfo.png';
-import RoundedButton from '../../core/RoundedButton.jsx';
+// import RoundedButton from '../../core/RoundedButton.jsx';
 
 const SecondInfo = () => {
 	return (
@@ -17,12 +17,12 @@ const SecondInfo = () => {
 						the internet. Make yourself at ease with our best picked laptop
 						recommendations and trusted sources information
 					</p>
-					<RoundedButton
+					{/* <RoundedButton
 						label="Learn More"
 						arrowColor="accent"
 						backgroundColor="black"
 						textColor="white"
-					/>
+					/> */}
 				</div>
 			</div>
 			<div className="grid justify-end">
