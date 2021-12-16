@@ -1,25 +1,106 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 import {
 	PaginationTypes,
 	priceRange,
 	PriceRangeValues,
 } from '../../utils/consts';
+import useFetchLaptops from '../../utils/hooks/useFetchLaptops';
 import GradientLine from '../core/GradientLine';
 import FilterComponent from './FilterComponent';
-import LaptopList from './LaptopList';
+import LaptopListWithButtonScrolling from './LaptopListWithButtonScrolling';
+import LaptopListWithInfiniteScrolling from './LaptopListWithInfiniteScrolling';
+
+const Actions = Object.freeze({
+	onPaginationFilterSelect: 'onPaginationFilterSelect',
+	onPriceFilterSelect: 'onPriceFilterSelect',
+	onInfiniteScrollingNextPage: 'onInfiniteScrollingNextPage',
+	onButtonScrollingNextPage: 'onButtonScrollingNextPage',
+	onButtonScrollingPreviousPage: 'onButtonScrollingPreviousPage',
+});
+
+const reducer = (state, action) => {
+	switch (action.type) {
+		case Actions.onPaginationFilterSelect:
+			return {
+				...state,
+				page: 1,
+				pagination: action.value,
+				shouldRefresh: true,
+			};
+		case Actions.onPriceFilterSelect:
+			return { ...state, page: 1, price: action.value, shouldRefresh: true };
+		case Actions.onInfiniteScrollingNextPage:
+			return { ...state, page: state.page + 1, shouldRefresh: false };
+		case Actions.onButtonScrollingNextPage:
+			return { ...state, page: state.page + 1, shouldRefresh: true };
+		case Actions.onButtonScrollingPreviousPage:
+			return { ...state, page: state.page - 1, shouldRefresh: true };
+		default:
+	}
+};
+
+const initialState = {
+	page: 1,
+	pagination: PaginationTypes[0],
+	price: PriceRangeValues[0],
+	shouldRefresh: true,
+};
 
 const BrowseBody = () => {
-	const [pagination, setPagination] = useState(PaginationTypes[0]);
-	const [price, setPrice] = useState(PriceRangeValues[0]);
+	const [state, dispatch] = useReducer(reducer, initialState);
+	const { data, isLoading, totalPages } = useFetchLaptops(
+		state.page,
+		state.pagination === PaginationTypes[0] ? 6 : 12,
+		state.price.minPrice,
+		state.price.maxPrice,
+		state.shouldRefresh
+	);
 
 	const onPaginationFilterSelect = (e) => {
-		setPagination(e.target.value);
+		dispatch({ type: Actions.onPaginationFilterSelect, value: e.target.value });
 	};
 
 	const onPriceFilterSelect = (e) => {
 		const index = priceRange.indexOf(e.target.value);
 
-		setPrice(PriceRangeValues[index]);
+		dispatch({
+			type: Actions.onPriceFilterSelect,
+			value: PriceRangeValues[index],
+		});
+	};
+
+	const LaptopList = () => {
+		if (state.pagination === PaginationTypes[1]) {
+			return (
+				<LaptopListWithInfiniteScrolling
+					data={data}
+					onNextPage={() => {
+						if (state.page + 1 > totalPages) return;
+						if (isLoading) return;
+
+						dispatch({ type: Actions.onInfiniteScrollingNextPage });
+					}}
+				/>
+			);
+		}
+
+		return (
+			<LaptopListWithButtonScrolling
+				data={data}
+				page={state.page}
+				totalPages={totalPages}
+				onPreviousPage={() => {
+					if (state.page === 1) return;
+
+					dispatch({ type: Actions.onButtonScrollingPreviousPage });
+				}}
+				onNextPage={() => {
+					if (state.page + 1 > totalPages) return;
+
+					dispatch({ type: Actions.onButtonScrollingNextPage });
+				}}
+			/>
+		);
 	};
 
 	return (
@@ -45,7 +126,9 @@ const BrowseBody = () => {
 					/>
 				</div>
 
-				<LaptopList filters={{ pagination, price }} />
+				<LaptopList />
+
+				{isLoading && <p>Loading...</p>}
 			</div>
 		</main>
 	);

@@ -1,34 +1,19 @@
-import { useState, useRef, useCallback } from 'react';
-import useFetchLaptops from '../../utils/hooks/useFetchLaptops';
+import { useRef, useCallback } from 'react';
 import LaptopItem from './LaptopItem';
 
-const limit = 12;
-
-const LaptopListWithInfiniteScrolling = ({ price }) => {
-	const [page, setPage] = useState(1);
-	const { data, isLoading, totalPages } = useFetchLaptops(
-		page,
-		limit,
-		price.minPrice,
-		price.maxPrice,
-		false
-	);
-
+const LaptopListWithInfiniteScrolling = ({ data, onNextPage }) => {
 	const observer = useRef();
 	const lastItemRef = useCallback(
 		(node) => {
-			const hasNextPage = page + 1 <= totalPages;
-
-			if (isLoading) return;
 			if (observer.current) observer.current.disconnect();
 			observer.current = new IntersectionObserver((entries) => {
-				if (entries[0].isIntersecting && hasNextPage) {
-					setPage((prevPageNumber) => prevPageNumber + 1);
+				if (entries[0].isIntersecting) {
+					onNextPage();
 				}
 			});
 			if (node) observer.current.observe(node);
 		},
-		[isLoading, page, totalPages]
+		[onNextPage]
 	);
 
 	return (
@@ -56,8 +41,6 @@ const LaptopListWithInfiniteScrolling = ({ price }) => {
 					);
 				})}
 			</div>
-
-			{isLoading ?? <p>Loading</p>}
 		</>
 	);
 };

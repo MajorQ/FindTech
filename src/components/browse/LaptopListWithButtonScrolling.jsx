@@ -1,30 +1,12 @@
-import { useState } from 'react';
-import useFetchLaptops from '../../utils/hooks/useFetchLaptops';
 import LaptopItem from './LaptopItem';
 
-const limit = 6;
-
-const LaptopListWithButtonScrolling = ({ price }) => {
-	const [page, setPage] = useState(1);
-	const { data, isLoading, totalPages } = useFetchLaptops(
-		page,
-		limit,
-		price.minPrice,
-		price.maxPrice
-	);
-
-	const handleNextBttn = () => {
-		if (page + 1 >= totalPages) return;
-
-		setPage(page + 1);
-	};
-
-	const handlePrevBttn = () => {
-		if (page === 1) return;
-
-		setPage(page - 1);
-	};
-
+const LaptopListWithButtonScrolling = ({
+	data,
+	page,
+	totalPages,
+	onPreviousPage,
+	onNextPage,
+}) => {
 	return (
 		<>
 			<div className="md:grid md:grid-cols-3 md:grid-rows-2 gap-4">
@@ -39,14 +21,12 @@ const LaptopListWithButtonScrolling = ({ price }) => {
 				})}
 			</div>
 
-			{isLoading ?? <p>Loading</p>}
-
 			<ul className="flex mt-20 justify-center">
 				{page !== 1 && (
 					<li>
 						<button
 							disabled={page === 1}
-							onClick={handlePrevBttn}
+							onClick={onPreviousPage}
 							className="mx-3"
 						>
 							Prev
@@ -55,7 +35,7 @@ const LaptopListWithButtonScrolling = ({ price }) => {
 				)}
 				{page + 1 <= totalPages && (
 					<li>
-						<button className="mx-3" onClick={handleNextBttn}>
+						<button className="mx-3" onClick={onNextPage}>
 							Next
 						</button>
 					</li>
