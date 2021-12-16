@@ -1,31 +1,18 @@
-import { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import NavBar from '../components/core/NavBar';
-import { Url } from '../utils/consts';
 import { formatter } from '../utils/fomatter';
+import useFetchPrediction from '../utils/hooks/useFetchPrediction';
 
 const ResultPage = (props) => {
 	const request = props.location.state;
 
-	const [result, setResult] = useState(null);
-
-	useEffect(() => {
-		if (request == null) return;
-
-		fetch(Url.predict, {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(request),
-		})
-			.then((response) => response.json())
-			.then((data) => setResult(data.result));
-	}, [request]);
+	const { isLoading, result } = useFetchPrediction(request);
 
 	if (request == null) {
 		return <Redirect to="/question" />;
 	}
 
-	if (result == null) {
+	if (isLoading) {
 		return <div>Loading...</div>;
 	}
 
