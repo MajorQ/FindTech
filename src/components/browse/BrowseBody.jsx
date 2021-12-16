@@ -1,14 +1,25 @@
 import { useState } from 'react';
-import { PaginationTypes, priceRange } from '../../utils/consts';
+import {
+	PaginationTypes,
+	priceRange,
+	PriceRangeValues,
+} from '../../utils/consts';
 import GradientLine from '../core/GradientLine';
 import FilterComponent from './FilterComponent';
 import LaptopList from './LaptopList';
 
 const BrowseBody = () => {
 	const [pagination, setPagination] = useState(PaginationTypes[0]);
+	const [price, setPrice] = useState(PriceRangeValues[0]);
 
-	const onFilterSelect = (e) => {
+	const onPaginationFilterSelect = (e) => {
 		setPagination(e.target.value);
+	};
+
+	const onPriceFilterSelect = (e) => {
+		const index = priceRange.indexOf(e.target.value);
+
+		setPrice(PriceRangeValues[index]);
 	};
 
 	return (
@@ -24,17 +35,17 @@ const BrowseBody = () => {
 						title="Pagination"
 						items={PaginationTypes}
 						selectName="pagination"
-						onSelect={onFilterSelect}
+						onSelect={onPaginationFilterSelect}
 					/>
 					<FilterComponent
 						title="Filter by Price"
 						items={priceRange}
 						selectName="price"
-						onSelect={onFilterSelect}
+						onSelect={onPriceFilterSelect}
 					/>
 				</div>
 
-				<LaptopList paginationType={pagination} />
+				<LaptopList filters={{ pagination, price }} />
 			</div>
 		</main>
 	);

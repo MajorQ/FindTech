@@ -18,8 +18,19 @@ export const QuestionTypes = Object.freeze({
 export const PaginationTypes = ['Default', 'Infinite Scrolling'];
 
 export const priceRange = [
+	'None',
 	'0 - 5.000.000',
 	'5.000.000 - 10.000.000',
 	'10.000.000 - 15.000.000',
-	'15.000.000++',
+	'15.000.000 - 20.000.000',
+	'20.000.000++',
+];
+
+export const PriceRangeValues = [
+	{},
+	{ minPrice: 0, maxPrice: 5000000 },
+	{ minPrice: 5000000, maxPrice: 10000000 },
+	{ minPrice: 10000000, maxPrice: 15000000 },
+	{ minPrice: 15000000, maxPrice: 20000000 },
+	{ minPrice: 20000000, maxPrice: 99999999 },
 ];

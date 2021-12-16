@@ -3,7 +3,13 @@ import axios from 'axios';
 import { instance } from '../axios';
 import { Url } from '../consts';
 
-export default function useFetchLaptops(page, limit, shouldRefresh = true) {
+export default function useFetchLaptops(
+	page,
+	limit,
+	minPrice,
+	maxPrice,
+	shouldRefresh = true
+) {
 	const [isLoading, setIsLoading] = useState(true);
 	const [hasError, setHasError] = useState(false);
 	const [data, setData] = useState([]);
@@ -18,7 +24,7 @@ export default function useFetchLaptops(page, limit, shouldRefresh = true) {
 
 			try {
 				const response = await instance.get(Url.laptops, {
-					params: { page, limit },
+					params: { page, limit, minPrice, maxPrice },
 					cancelToken: new axios.CancelToken(
 						(cancelToken) => (cancel = cancelToken)
 					),
@@ -44,7 +50,7 @@ export default function useFetchLaptops(page, limit, shouldRefresh = true) {
 		}
 
 		return fetchData();
-	}, [page, limit, shouldRefresh]);
+	}, [page, limit, shouldRefresh, minPrice, maxPrice]);
 
 	return { isLoading, hasError, data, totalPages };
 }

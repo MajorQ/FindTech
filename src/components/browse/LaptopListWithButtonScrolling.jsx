@@ -4,9 +4,14 @@ import LaptopItem from './LaptopItem';
 
 const limit = 6;
 
-const LaptopListWithButtonScrolling = () => {
+const LaptopListWithButtonScrolling = ({ price }) => {
 	const [page, setPage] = useState(1);
-	const { data, isLoading, totalPages } = useFetchLaptops(page, limit);
+	const { data, isLoading, totalPages } = useFetchLaptops(
+		page,
+		limit,
+		price.minPrice,
+		price.maxPrice
+	);
 
 	const handleNextBttn = () => {
 		if (page + 1 >= totalPages) return;

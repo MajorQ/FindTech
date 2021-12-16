@@ -4,9 +4,15 @@ import LaptopItem from './LaptopItem';
 
 const limit = 12;
 
-const LaptopListWithInfiniteScrolling = () => {
+const LaptopListWithInfiniteScrolling = ({ price }) => {
 	const [page, setPage] = useState(1);
-	const { data, isLoading, totalPages } = useFetchLaptops(page, limit, false);
+	const { data, isLoading, totalPages } = useFetchLaptops(
+		page,
+		limit,
+		price.minPrice,
+		price.maxPrice,
+		false
+	);
 
 	const observer = useRef();
 	const lastItemRef = useCallback(
