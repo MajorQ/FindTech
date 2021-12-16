@@ -4,8 +4,8 @@ export const navBarItems = [
 ];
 
 export const Url = {
-	browse: '/laptops',
-	predict: '/predict',
+	browse: 'https://findtech.herokuapp.com/api/laptops',
+	predict: 'https://findtech.herokuapp.com/api/predict',
 };
 
 export const QuestionTypes = Object.freeze({
