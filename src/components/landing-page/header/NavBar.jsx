@@ -3,7 +3,7 @@ import { useState } from 'react';
 import NavBarBurger from '../../core/NavBarBurger';
 import NavBarItemsText from '../../core/NavBarItemsText';
 import logo from '../../../assets/images/logo.svg';
-import { navBarItems } from '../../../utils/consts';
+import { NavBarItems } from '../../../utils/consts';
 
 const NavBar = () => {
 	let [showNavBarItems, setShowNavBarItems] = useState(false);
@@ -24,7 +24,7 @@ const NavBar = () => {
 
 				{/* Buttons */}
 				<div className="hidden md:flex w-2/3 justify-evenly items-center">
-					{navBarItems.map((item, index) => {
+					{NavBarItems.map((item, index) => {
 						return (
 							<Link
 								to={item.link}
@@ -59,7 +59,7 @@ const NavBar = () => {
 			</div>
 
 			<NavBarItemsText
-				navBarItems={navBarItems}
+				navBarItems={NavBarItems}
 				showNavBarItems={showNavBarItems}
 			/>
 		</nav>

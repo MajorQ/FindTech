@@ -1,7 +1,8 @@
 import { Redirect } from 'react-router-dom';
 import NavBar from '../components/core/NavBar';
+import { Url } from '../utils/consts';
 import { formatter } from '../utils/fomatter';
-import useFetchPrediction from '../utils/hooks/useFetchPrediction';
+import usePost from '../utils/hooks/usePost';
 import useSetPageTitle from '../utils/hooks/useSetPageTitle';
 
 const ResultPage = (props) => {
@@ -9,7 +10,7 @@ const ResultPage = (props) => {
 
 	const request = props.location.state;
 
-	const { isLoading, result } = useFetchPrediction(request);
+	const { isLoading, result } = usePost(request, Url.predict);
 
 	if (request == null) {
 		return <Redirect to="/question" />;

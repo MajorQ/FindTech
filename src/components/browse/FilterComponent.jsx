@@ -1,23 +1,18 @@
-const FilterComponent = ({ title, items, selectName, onSelect }) => {
+const FilterComponent = ({ title, items, onSelect }) => {
 	return (
 		<>
 			<label htmlFor="select" className=" font-bold md:mx-5">
 				{title}
 			</label>
-			<select
-				name={selectName}
-				id=""
-				className="font-bold  rounded-xl"
-				onChange={onSelect}
-			>
+			<select name={title} className="font-bold rounded-xl" onChange={onSelect}>
 				{items.map((item, index) => {
 					return (
 						<option
-							value={item}
+							value={index}
 							className="bg-white"
-							key={`Filter-${item}-${index}`}
+							key={`Filter-${item.title}-${index}`}
 						>
-							{item}
+							{item.title}
 						</option>
 					);
 				})}

@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { instance } from '../axios';
-import { Url } from '../consts';
 
-export default function useFetchLaptops(
+export default function useFetchPagination(
+	url,
 	page,
 	limit,
-	minPrice,
-	maxPrice,
+	filters,
 	shouldRefresh = true
 ) {
 	const [isLoading, setIsLoading] = useState(true);
@@ -16,15 +15,15 @@ export default function useFetchLaptops(
 	const [totalPages, setTotalPages] = useState(1);
 
 	useEffect(() => {
-		async function fetchData() {
+		let cancel;
+
+		const fetchPagination = async () => {
 			setIsLoading(true);
 			setHasError(false);
 
-			let cancel;
-
 			try {
-				const response = await instance.get(Url.laptops, {
-					params: { page, limit, minPrice, maxPrice },
+				const response = await instance.get(url, {
+					params: { page, limit, ...filters },
 					cancelToken: new axios.CancelToken(
 						(cancelToken) => (cancel = cancelToken)
 					),
@@ -45,12 +44,12 @@ export default function useFetchLaptops(
 			}
 
 			setIsLoading(false);
+		};
 
-			return () => cancel();
-		}
+		fetchPagination();
 
-		return fetchData();
-	}, [page, limit, shouldRefresh, minPrice, maxPrice]);
+		if (cancel != null) return () => cancel();
+	}, [url, page, limit, shouldRefresh, filters]);
 
 	return { isLoading, hasError, data, totalPages };
 }

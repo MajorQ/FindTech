@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 import NavBarBurger from './NavBarBurger';
-import { navBarItems } from '../../utils/consts';
+import { NavBarItems } from '../../utils/consts';
 import NavBarItemsText from './NavBarItemsText';
 
 const NavBar = ({ selected }) => {
@@ -25,7 +25,7 @@ const NavBar = ({ selected }) => {
 
 					{/* Buttons */}
 					<div className="hidden md:flex w-2/3 justify-evenly items-center">
-						{navBarItems.map((item, index) => {
+						{NavBarItems.map((item, index) => {
 							if (item.title === selected) {
 								return (
 									<Link
@@ -52,7 +52,7 @@ const NavBar = ({ selected }) => {
 				</div>
 
 				<NavBarItemsText
-					navBarItems={navBarItems}
+					navBarItems={NavBarItems}
 					showNavBarItems={showNavBarItems}
 					selected={selected}
 				/>
