@@ -2,8 +2,11 @@ import { Redirect } from 'react-router-dom';
 import NavBar from '../components/core/NavBar';
 import { formatter } from '../utils/fomatter';
 import useFetchPrediction from '../utils/hooks/useFetchPrediction';
+import useSetPageTitle from '../utils/hooks/useSetPageTitle';
 
 const ResultPage = (props) => {
+	useSetPageTitle();
+
 	const request = props.location.state;
 
 	const { isLoading, result } = useFetchPrediction(request);

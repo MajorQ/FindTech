@@ -2,8 +2,11 @@ import AboutUsProfile from '../components/about-us/AboutUsProfile';
 import AboutUsBody from '../components/about-us/AboutUsBody';
 import NavBar from '../components/core/NavBar';
 import ContactUsForm from '../components/about-us/ContactUsForm';
+import useSetPageTitle from '../utils/hooks/useSetPageTitle';
 
 const AboutUsPage = () => {
+	useSetPageTitle('Findtech | About Us');
+
 	return (
 		<div>
 			<NavBar selected="About Us" />

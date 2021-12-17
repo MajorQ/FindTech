@@ -6,8 +6,11 @@ import SecondInfo from '../components/landing-page/body/SecondInfo';
 import About from '../components/landing-page/body/About';
 import UserReviews from '../components/landing-page/body/UserReviews';
 import Footer from '../components/landing-page/footer/Footer';
+import useSetPageTitle from '../utils/hooks/useSetPageTitle';
 
 const LandingPage = () => {
+	useSetPageTitle();
+
 	return (
 		<div>
 			<header className="w-full h-screen bg-landing-header bg-cover md:grid md:grid-cols-2 md:content-between px-6 md:px-20 lg:px-40">

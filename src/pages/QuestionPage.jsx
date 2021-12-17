@@ -6,6 +6,7 @@ import AnswerSingle from '../components/question/AnswerSingle';
 import AnswerMutliple from '../components/question/AnswerMultiple';
 import ArrowButton from '../components/core/ArrowButton';
 import { useHistory } from 'react-router-dom';
+import useSetPageTitle from '../utils/hooks/useSetPageTitle';
 
 const getInitialAnswers = () => {
 	return Questions.map((question) => {
@@ -19,6 +20,8 @@ const getInitialAnswers = () => {
 };
 
 const QuestionPage = () => {
+	useSetPageTitle();
+
 	const [questionIndex, setQuestionIndex] = useState(0);
 	const [selectedAnswers, setSelectedAnswers] = useState(getInitialAnswers());
 	const question = Questions.at(questionIndex);
