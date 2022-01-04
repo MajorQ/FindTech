@@ -44,3 +44,9 @@ export const PriceRangeTypes = deepFreeze([
 		maxPrice: 99999999,
 	}),
 ]);
+
+export const ResultFeedback = deepFreeze({
+	none: 0,
+	positive: 1,
+	negative: -1,
+});
