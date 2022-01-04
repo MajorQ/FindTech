@@ -1,6 +1,4 @@
-const ArrowButton = ({ onClick, isEnabled = true, isForward = true }) => {
-	const path = isForward ? 'M9 5l7 7-7 7' : 'M15 19l-7-7 7-7';
-
+const ArrowButton = ({ onClick, isEnabled = true, iconPath }) => {
 	if (!isEnabled) {
 		return <div></div>;
 	}
@@ -18,7 +16,7 @@ const ArrowButton = ({ onClick, isEnabled = true, isForward = true }) => {
 					strokeLinecap="round"
 					strokeLinejoin="round"
 					strokeWidth={2}
-					d={path}
+					d={iconPath}
 				/>
 			</svg>
 		</button>

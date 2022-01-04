@@ -5,6 +5,7 @@ import Question from '../components/question/Question';
 import AnswerSingle from '../components/question/AnswerSingle';
 import AnswerMutliple from '../components/question/AnswerMultiple';
 import ArrowButton from '../components/core/ArrowButton';
+import { icForward, icBackward } from '../utils/assets';
 import { useHistory } from 'react-router-dom';
 import useSetPageTitle from '../utils/hooks/useSetPageTitle';
 
@@ -120,7 +121,7 @@ const QuestionPage = () => {
 				<div className="mx-auto">
 					<ArrowButton
 						isEnabled={questionIndex !== 0}
-						isForward={false}
+						iconPath={icBackward}
 						onClick={goToPreviousQuestion}
 					></ArrowButton>
 				</div>
@@ -136,6 +137,7 @@ const QuestionPage = () => {
 				<div className="mx-auto">
 					<ArrowButton
 						isEnabled={selectedAnswers[questionIndex] !== -1}
+						iconPath={icForward}
 						onClick={goToNextQuestion}
 					></ArrowButton>
 				</div>
